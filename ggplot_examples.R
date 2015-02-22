@@ -33,8 +33,34 @@ library(RColorBrewer)
 display.brewer.all()
 
 df <- melt(iris, id.vars="Species")
-barGraph <- ggplot(df,aes(Species, value, fill=variable)) + geom_bar(stat="identity",position="dodge") + scale_color_manual(values = c("red","red","red"))
+barGraph <- ggplot(df,aes(Species, value, fill=variable)) + 
+  geom_bar(stat="identity",position="dodge") + 
+  scale_color_manual(values = c("red","red","red"))
 barGraph
+
+#scales
+ggplot(birthwt,aes(factor(race),bwt))+
+  geom_boxplot(width=.2)+
+  scale_y_continuous(labels=(paste0))
+
+#coordinates
+
+
+#done with lecture
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
