@@ -49,7 +49,7 @@ ggplot(birthwt,aes(factor(race),bwt))+
 #done with lecture
 
 
-
+# im in the cloud
 
 
 
