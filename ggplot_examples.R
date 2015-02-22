@@ -24,3 +24,17 @@ ggplot(d2, aes(carat,price, color=color)) + geom_point()
 
 library("MASS")
 ggplot(birthwt, aes(factor(race),bwt)) + geom_boxplot()
+
+summary(myplot)
+ggplot(iris,aes(Sepal.Length, Sepal.Width, color=Species)) + 
+  geom_point() + 
+  facet_grid(Species~.)
+library(RColorBrewer)
+display.brewer.all()
+
+df <- melt(iris, id.vars="Species")
+barGraph <- ggplot(df,aes(Species, value, fill=variable)) + geom_bar(stat="identity",position="dodge") + scale_color_manual(values = c("red","red","red"))
+barGraph
+
+
+
